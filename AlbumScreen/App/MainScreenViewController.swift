@@ -61,7 +61,7 @@ class MainScreenViewController: UIViewController {
                 layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
 
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 10)
                 layoutSection.orthogonalScrollingBehavior = .groupPaging
                 
                 return layoutSection

@@ -18,25 +18,29 @@ class MyAlbumsCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
     private lazy var albumNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        label.textColor = .white
         return label
     }()
     
     private lazy var numberOfPhotosLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 12, weight: .bold))
+        label.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 16, weight: .regular))
+        label.textColor = .systemGray
         return label
     }()
     
     lazy var stack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
+//        stack.spacing = 0.5
+//        stack.distribution = .fillProportionally
         return stack
     }()
     
@@ -65,6 +69,9 @@ class MyAlbumsCell: UICollectionViewCell {
     private func setupLayout() {
         stack.snp.makeConstraints { make in
             make.left.top.right.bottom.equalTo(contentView)
+        }
+        albumImageView.snp.makeConstraints { make in
+            make.bottom.equalTo(stack).multipliedBy(0.8)
         }
     }
     
