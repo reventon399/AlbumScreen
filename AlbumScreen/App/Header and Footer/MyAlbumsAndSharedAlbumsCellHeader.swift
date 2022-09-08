@@ -13,10 +13,23 @@ class MyAlbumsAndSharedAlbumsCellHeader: UICollectionReusableView {
     
     // MARK: - Outlets
     
-    lazy var title: UILabel = {
+    lazy var headerLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return label
+    }()
+    
+    private lazy var separatorView: UIView = {
+       let view = UIView()
+        view.backgroundColor = .systemGray
+        return view
+    }()
+    
+    private lazy var seeAllButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("See All", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        return button
     }()
     
     // MARK: - Initializers
@@ -37,18 +50,29 @@ class MyAlbumsAndSharedAlbumsCellHeader: UICollectionReusableView {
     // MARK: - Setup
     
     private func setupHierarchy() {
-        addSubview(title)
+        addSubview(headerLabel)
+        addSubview(separatorView)
+        addSubview(seeAllButton)
     }
     
     private func setupLayout() {
-        title.snp.makeConstraints { make in
+        headerLabel.snp.makeConstraints { make in
             make.bottom.equalTo(self)
             make.left.equalTo(self)
+        }
+        seeAllButton.snp.makeConstraints { make in
+            make.right.equalTo(self)
+            make.bottom.equalTo(headerLabel.snp.bottom)
+        }
+        separatorView.snp.makeConstraints { make in
+            make.height.equalTo(0.5)
+            make.width.equalTo(safeAreaLayoutGuide)
+            make.bottom.equalTo(headerLabel.snp.top).offset(-14)
         }
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        title.text = nil
+        headerLabel.text = nil
     }
 }
