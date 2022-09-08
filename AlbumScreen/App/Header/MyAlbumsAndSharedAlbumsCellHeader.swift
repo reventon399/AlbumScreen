@@ -62,7 +62,7 @@ class MyAlbumsAndSharedAlbumsCellHeader: UICollectionReusableView {
         }
         seeAllButton.snp.makeConstraints { make in
             make.right.equalTo(self)
-            make.bottom.equalTo(headerLabel.snp.bottom)
+            make.bottom.equalTo(self)
         }
         separatorView.snp.makeConstraints { make in
             make.height.equalTo(0.5)

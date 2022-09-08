@@ -97,7 +97,7 @@
 		91911FB228CA46B700C21F64 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				91911FBD28CA7E1C00C21F64 /* Header and Footer */,
+				91911FBD28CA7E1C00C21F64 /* Header */,
 				91911FBC28CA6B8400C21F64 /* Delegates */,
 				91911FB728CA4C9100C21F64 /* Cells */,
 				91911F9F28CA434E00C21F64 /* MainScreenViewController.swift */,
@@ -123,12 +123,12 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		91911FBD28CA7E1C00C21F64 /* Header and Footer */ = {
+		91911FBD28CA7E1C00C21F64 /* Header */ = {
 			isa = PBXGroup;
 			children = (
 				91911FBE28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift */,
 			);
-			path = "Header and Footer";
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
