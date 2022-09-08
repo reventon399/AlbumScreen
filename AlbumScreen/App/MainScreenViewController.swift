@@ -43,6 +43,8 @@ class MainScreenViewController: UIViewController {
         }
     }
     
+    //MARK: - Create UICollectionLayout
+    
     private func createLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { (sectionIndex, _) -> NSCollectionLayoutSection in
             
