@@ -54,14 +54,46 @@
 		91911F9A28CA434E00C21F64 /* AlbumScreen */ = {
 			isa = PBXGroup;
 			children = (
+				91911FB228CA46B700C21F64 /* App */,
+				91911FB128CA46A300C21F64 /* Sources */,
+				91911FAF28CA467D00C21F64 /* Resources */,
+			);
+			path = AlbumScreen;
+			sourceTree = "<group>";
+		};
+		91911FAF28CA467D00C21F64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91911FA428CA435000C21F64 /* Assets.xcassets */,
+				91911FB028CA468F00C21F64 /* Configuration */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		91911FB028CA468F00C21F64 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				91911FA928CA435000C21F64 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		91911FB128CA46A300C21F64 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				91911FA628CA435000C21F64 /* LaunchScreen.storyboard */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		91911FB228CA46B700C21F64 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				91911F9B28CA434E00C21F64 /* AppDelegate.swift */,
 				91911F9D28CA434E00C21F64 /* SceneDelegate.swift */,
 				91911F9F28CA434E00C21F64 /* ViewController.swift */,
-				91911FA428CA435000C21F64 /* Assets.xcassets */,
-				91911FA628CA435000C21F64 /* LaunchScreen.storyboard */,
-				91911FA928CA435000C21F64 /* Info.plist */,
 			);
-			path = AlbumScreen;
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +309,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66ZXKDA6XW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlbumScreen/Info.plist;
+				INFOPLIST_FILE = AlbumScreen/Resources/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -304,7 +336,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66ZXKDA6XW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlbumScreen/Info.plist;
+				INFOPLIST_FILE = AlbumScreen/Resources/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
