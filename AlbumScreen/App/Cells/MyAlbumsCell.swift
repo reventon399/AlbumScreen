@@ -10,6 +10,8 @@ import SnapKit
 
 class MyAlbumsCell: UICollectionViewCell {
     
+    static let identifier = "MyAlbumsCell"
+    
     //MARK: - Outlets
     
     private lazy var albumImageView: UIImageView = {
