@@ -17,7 +17,7 @@ struct AlbumsModel: Hashable {
 extension AlbumsModel {
     static let albumsModelsArray = [
         // zero section
-        [AlbumsModel(albumImage: "recents", albumName: "Recents", numberOfPhotosLabel: "1998", chevronImage: nil),
+        [AlbumsModel(albumImage: "recents", albumName: "Recents", numberOfPhotosLabel: "1 998", chevronImage: nil),
          AlbumsModel(albumImage: "favorites", albumName: "Favorites", numberOfPhotosLabel: "500", chevronImage: nil),
          AlbumsModel(albumImage: "football", albumName: "Football", numberOfPhotosLabel: "10", chevronImage: nil),
          AlbumsModel(albumImage: "instagram", albumName: "Instagram", numberOfPhotosLabel: "37", chevronImage: nil),
