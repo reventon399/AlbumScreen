@@ -73,4 +73,8 @@ class MyAlbumsCell: UICollectionViewCell {
     }
     
     //MARK: - Reuse
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
 }
