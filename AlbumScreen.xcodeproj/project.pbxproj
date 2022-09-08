@@ -13,6 +13,7 @@
 		91911FA528CA435000C21F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91911FA428CA435000C21F64 /* Assets.xcassets */; };
 		91911FA828CA435000C21F64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91911FA628CA435000C21F64 /* LaunchScreen.storyboard */; };
 		91911FB528CA497E00C21F64 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 91911FB428CA497E00C21F64 /* SnapKit */; };
+		91911FB928CA4CB400C21F64 /* MyAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		91911FA428CA435000C21F64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91911FA728CA435000C21F64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91911FA928CA435000C21F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +93,20 @@
 		91911FB228CA46B700C21F64 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				91911FB728CA4C9100C21F64 /* Cells */,
 				91911F9B28CA434E00C21F64 /* AppDelegate.swift */,
 				91911F9D28CA434E00C21F64 /* SceneDelegate.swift */,
 				91911F9F28CA434E00C21F64 /* MainScreenViewController.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		91911FB728CA4C9100C21F64 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				91911FA028CA434E00C21F64 /* MainScreenViewController.swift in Sources */,
 				91911F9C28CA434E00C21F64 /* AppDelegate.swift in Sources */,
 				91911F9E28CA434E00C21F64 /* SceneDelegate.swift in Sources */,
+				91911FB928CA4CB400C21F64 /* MyAlbumsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
