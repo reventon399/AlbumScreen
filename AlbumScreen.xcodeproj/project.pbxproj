@@ -95,9 +95,8 @@
 		91911FB228CA46B700C21F64 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				91911FBC28CA6B8400C21F64 /* Delegates */,
 				91911FB728CA4C9100C21F64 /* Cells */,
-				91911F9B28CA434E00C21F64 /* AppDelegate.swift */,
-				91911F9D28CA434E00C21F64 /* SceneDelegate.swift */,
 				91911F9F28CA434E00C21F64 /* MainScreenViewController.swift */,
 				91911FBA28CA5EDB00C21F64 /* Model.swift */,
 			);
@@ -110,6 +109,15 @@
 				91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		91911FBC28CA6B8400C21F64 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				91911F9B28CA434E00C21F64 /* AppDelegate.swift */,
+				91911F9D28CA434E00C21F64 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

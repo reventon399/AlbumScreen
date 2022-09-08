@@ -70,13 +70,16 @@ class MyAlbumsCell: UICollectionViewCell {
     
     //MARK: - Configuration
     
-    private func configuration() {
-        
+    func configuration(model: AlbumsModel) {
+        self.albumImageView.image = UIImage(named: model.albumImage)
+        self.albumNameLabel.text = model.albumName
+        self.numberOfPhotosLabel.text = model.numberOfPhotosLabel
     }
     
     //MARK: - Reuse
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        self.albumImageView.image = nil
     }
 }

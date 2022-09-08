@@ -50,46 +50,19 @@ class MainScreenViewController: UIViewController {
             
             switch sectionIndex {
             case 0:
-                
-                let itemSize = NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(0.5),
-                    heightDimension: .fractionalHeight(1)
-                )
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                      heightDimension: .fractionalHeight(1))
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-                layoutItem.contentInsets = .init(top: 10,
-                                                 leading: 10,
-                                                 bottom: 10,
-                                                 trailing: 10)
+                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 0)
                 
-                let groupSize = NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1),
-                    heightDimension: .estimated(300)
-                )
-                
-                let layoutGroup = NSCollectionLayoutGroup.horizontal(
-                    layoutSize: groupSize,
-                    subitems: [layoutItem]
-                )
-                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1 / 2.2),
+                                                       heightDimension: .fractionalWidth(1 / 1.8 * 2))
+                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: layoutItem, count: 2)
+                layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
+
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-                layoutSection.orthogonalScrollingBehavior = .continuous
-                
-                
-                
-                let layoutSectionHeaderSize = NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(0.93),
-                    heightDimension: .estimated(80)
-                )
-                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-                    layoutSize: layoutSectionHeaderSize,
-                    elementKind: UICollectionView.elementKindSectionHeader,
-                    alignment: .top
-                )
-                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
-                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0,
-                                                                leading: 0,
-                                                                bottom: 20,
-                                                                trailing: 0)
+                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+                layoutSection.orthogonalScrollingBehavior = .groupPaging
                 
                 return layoutSection
             case 1:
@@ -226,10 +199,19 @@ class MainScreenViewController: UIViewController {
 extension MainScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        return AlbumsModel.albumsModelsArray[section].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        switch indexPath.section {
+        case 0:
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCell.identifier, for: indexPath) as! MyAlbumsCell
+            item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
+            return item
+        default:
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCell.identifier, for: indexPath) as! MyAlbumsCell
+            item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
+            return item
+        }
     }
 }
