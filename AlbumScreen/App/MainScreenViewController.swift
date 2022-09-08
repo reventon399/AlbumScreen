@@ -226,10 +226,19 @@ class MainScreenViewController: UIViewController {
 extension MainScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        return AlbumsModel.albumsModelsArray[section].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        switch indexPath.section {
+        case 0:
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCell.identifier, for: indexPath) as! MyAlbumsCell
+            item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
+            return item
+        default:
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCell.identifier, for: indexPath) as! MyAlbumsCell
+            item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
+            return item
+        }
     }
 }
