@@ -176,6 +176,10 @@ extension MainScreenViewController: UICollectionViewDataSource, UICollectionView
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: MediaTypesCell.identifier, for: indexPath) as! MediaTypesCell
             item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
             return item
+        case 3:
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: UtilitiesCell.identifier, for: indexPath) as! UtilitiesCell
+            item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
+            return item
         default:
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCell.identifier, for: indexPath) as! MyAlbumsCell
             item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
