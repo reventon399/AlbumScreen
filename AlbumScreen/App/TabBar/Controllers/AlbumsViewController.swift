@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MainScreenViewController: UIViewController {
+class AlbumsViewController: UIViewController {
     
    private var albumItems: [[AlbumsModel]]?
     
@@ -177,7 +177,7 @@ class MainScreenViewController: UIViewController {
 
 //MARK: - MainScreenViewController extension
 
-extension MainScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return AlbumsModel.albumsModelsArray[section].count

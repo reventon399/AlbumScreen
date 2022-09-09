@@ -1,5 +1,5 @@
 //
-//  LibraryTabBarViewController.swift
+//  ForYouTabBarViewController.swift
 //  AlbumScreen
 //
 //  Created by Алексей Лосев on 09.09.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LibraryTabBarViewController: UIViewController {
+class ForYouViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
