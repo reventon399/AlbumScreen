@@ -238,6 +238,6 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
      let itemName = String(describing: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item].albumName!)
-        print("Была нажата ячейка -> \(itemName)")
+        print("Был выбран айтем -> \(itemName)")
     }
 }
