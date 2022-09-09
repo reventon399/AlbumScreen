@@ -10,8 +10,6 @@ import SnapKit
 
 class AlbumsViewController: UIViewController {
     
-   private var albumItems: [[AlbumsModel]]?
-    
     //MARK: - Outlets
     
     private lazy var collectionView: UICollectionView = {
@@ -91,7 +89,7 @@ class AlbumsViewController: UIViewController {
                 layoutSection.orthogonalScrollingBehavior = .groupPaging
                 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
-                                                                     heightDimension: .estimated(50))
+                                                                     heightDimension: .estimated(44))
                 
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
@@ -118,7 +116,7 @@ class AlbumsViewController: UIViewController {
                 layoutSection.orthogonalScrollingBehavior = .groupPaging
                 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
-                                                                     heightDimension: .estimated(50))
+                                                                     heightDimension: .estimated(44))
                 
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
@@ -239,7 +237,7 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-//        let itemName = String(describing: albumItems![indexPath.section][indexPath.item].albumName)
-//        print("Была нажата ячейка -> \(itemName)")
+     let itemName = String(describing: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item].albumName!)
+        print("Была нажата ячейка -> \(itemName)")
     }
 }
