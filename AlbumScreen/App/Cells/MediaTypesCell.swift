@@ -44,12 +44,6 @@ class MediaTypesCell: UICollectionViewCell {
         imageView.tintColor = .systemGray
         return imageView
     }()
-    
-    private lazy var separatorView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemGray
-        return view
-    }()
    
     
     //MARK: - Initializers
@@ -72,40 +66,34 @@ class MediaTypesCell: UICollectionViewCell {
         addSubview(albumNameLabel)
         addSubview(numberOfPhotosLabel)
         addSubview(chevronImageView)
-        addSubview(separatorView)
     }
     
     private func setupLayout() {
         albumImageView.snp.makeConstraints { make in
             make.centerY.equalTo(self)
-            make.left.equalTo(self)
+            make.left.equalTo(contentView.snp.left).offset(15)
         }
         albumNameLabel.snp.makeConstraints { make in
             make.centerY.equalTo(albumImageView.snp.centerY)
-            make.left.equalTo(albumImageView.snp.right).offset(10)
+            make.left.equalTo(albumImageView.snp.right).offset(15)
         }
         chevronImageView.snp.makeConstraints { make in
-            make.centerY.equalTo(self)
-            make.right.equalTo(safeAreaLayoutGuide.snp.right).offset(-10)
+            make.centerY.equalTo(contentView.snp.centerY)
+            make.right.equalTo(contentView.snp.right).offset(-20)
         }
         numberOfPhotosLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(chevronImageView.snp.centerY)
-            make.right.equalTo(chevronImageView.snp.left).offset(10)
-        }
-        separatorView.snp.makeConstraints { make in
-            make.left.equalTo(albumNameLabel.snp.left)
-            make.top.equalTo(albumNameLabel.snp.bottom).offset(-10)
-            make.left.equalTo(safeAreaLayoutGuide.snp.left).offset(10)
+            make.centerY.equalTo(albumImageView)
+            make.right.equalTo(chevronImageView.snp.left).offset(-10)
         }
     }
     
     //MARK: - Configuration
     
     func configuration(model: AlbumsModel) {
-        self.albumImageView.image = UIImage(named: model.albumImage)
+        self.albumImageView.image = UIImage(systemName: model.albumImage)
         self.albumNameLabel.text = model.albumName
         self.numberOfPhotosLabel.text = model.numberOfPhotosLabel
-        self.chevronImageView.image = UIImage(named: model.chevronImage!)
+        self.chevronImageView.image = UIImage(systemName: model.chevronImage ?? "")
     }
     
     //MARK: - Reuse
