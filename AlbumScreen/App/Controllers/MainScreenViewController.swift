@@ -10,6 +10,8 @@ import SnapKit
 
 class MainScreenViewController: UIViewController {
     
+   private var albumItems: [[AlbumsModel]]?
+    
     //MARK: - Outlets
     
     private lazy var collectionView: UICollectionView = {
@@ -37,7 +39,7 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         title = "Albums"
         view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
+        setupNavigationController()
         setupHierarchy()
         setupLayout()
     }
@@ -52,6 +54,17 @@ class MainScreenViewController: UIViewController {
         collectionView.snp.makeConstraints { make in
             make.left.top.right.bottom.equalTo(view)
         }
+    }
+    
+    private func setupNavigationController() {
+        navigationItem.leftBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    //MARK: - Action
+    
+    @objc private func addButtonPressed() {
+        
     }
     
     //MARK: - Create UICollectionLayout
@@ -69,6 +82,7 @@ class MainScreenViewController: UIViewController {
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1 / 2.2),
                                                        heightDimension: .fractionalWidth(1 / 1.8 * 2))
+                
                 let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: layoutItem, count: 2)
                 layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
                 
@@ -78,6 +92,7 @@ class MainScreenViewController: UIViewController {
                 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
                                                                      heightDimension: .estimated(50))
+                
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
@@ -88,11 +103,13 @@ class MainScreenViewController: UIViewController {
             case 1:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                       heightDimension: .fractionalHeight(1))
+                
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
                 layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 10)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                        heightDimension: .fractionalWidth(1 / 1.8))
+                
                 let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: layoutItem, count: 2)
                 layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
                 
@@ -102,6 +119,7 @@ class MainScreenViewController: UIViewController {
                 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
                                                                      heightDimension: .estimated(50))
+                
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
@@ -121,7 +139,7 @@ class MainScreenViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
                 layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
-                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0)
+                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
                 
                 return layoutSection
             case 3:
@@ -136,7 +154,7 @@ class MainScreenViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
                 layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
-                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0)
+                layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
                 
                 return layoutSection
             default:
@@ -221,5 +239,7 @@ extension MainScreenViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+//        let itemName = String(describing: albumItems![indexPath.section][indexPath.item].albumName)
+//        print("Была нажата ячейка -> \(itemName)")
     }
 }

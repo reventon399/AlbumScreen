@@ -9,13 +9,13 @@ import Foundation
 
 struct AlbumsModel: Hashable {
     var albumImage: String
-    var albumName: String?
+    var albumName: String
     var numberOfPhotosLabel: String?
     var chevronImage: String?
 }
 
 extension AlbumsModel {
-    static let albumsModelsArray = [
+    static var albumsModelsArray: [[AlbumsModel]] = [
         // zero section
         [AlbumsModel(albumImage: "recents", albumName: "Recents", numberOfPhotosLabel: "1 998", chevronImage: nil),
          AlbumsModel(albumImage: "favorites", albumName: "Favorites", numberOfPhotosLabel: "500", chevronImage: nil),
