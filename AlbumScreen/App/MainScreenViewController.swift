@@ -22,6 +22,9 @@ class MainScreenViewController: UIViewController {
         collectionView.register(MyAlbumsAndSharedAlbumsCellHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier)
+        collectionView.register(MediaTypesAndUtilitiesHeader.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: MediaTypesAndUtilitiesHeader.identifier)
         
         collectionView.delegate = self
         collectionView.dataSource = self
