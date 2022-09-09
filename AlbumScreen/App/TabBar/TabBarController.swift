@@ -14,16 +14,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        view.backgroundColor = .white
         setupTabBarController()
     }
-    
     private func setupTabBarController() {
-        let blurEffect = UIBlurEffect(style: .prominent) // here you can change blur style
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.frame = tabBar.bounds
-        blurView.autoresizingMask = .flexibleWidth
-        tabBar.insertSubview(blurView, at: 0)
+        _ = UIBarStyle(rawValue: 2)
         tabBar.tintColor = .systemGray
     }
 
