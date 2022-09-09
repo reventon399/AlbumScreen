@@ -15,6 +15,7 @@
 		91911FB528CA497E00C21F64 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 91911FB428CA497E00C21F64 /* SnapKit */; };
 		91911FB928CA4CB400C21F64 /* MyAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */; };
 		91911FBB28CA5EDC00C21F64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FBA28CA5EDB00C21F64 /* Model.swift */; };
+		91911FBF28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FBE28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		91911FA928CA435000C21F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsCell.swift; sourceTree = "<group>"; };
 		91911FBA28CA5EDB00C21F64 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		91911FBE28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsAndSharedAlbumsCellHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		91911FB228CA46B700C21F64 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				91911FBD28CA7E1C00C21F64 /* Header */,
 				91911FBC28CA6B8400C21F64 /* Delegates */,
 				91911FB728CA4C9100C21F64 /* Cells */,
 				91911F9F28CA434E00C21F64 /* MainScreenViewController.swift */,
@@ -118,6 +121,14 @@
 				91911F9D28CA434E00C21F64 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		91911FBD28CA7E1C00C21F64 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				91911FBE28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				91911F9C28CA434E00C21F64 /* AppDelegate.swift in Sources */,
 				91911F9E28CA434E00C21F64 /* SceneDelegate.swift in Sources */,
 				91911FB928CA4CB400C21F64 /* MyAlbumsCell.swift in Sources */,
+				91911FBF28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
