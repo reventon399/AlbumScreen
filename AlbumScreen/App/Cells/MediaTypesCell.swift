@@ -10,7 +10,7 @@ import SnapKit
 
 class MediaTypesCell: UICollectionViewCell {
     
-    static let identifier = "SharedAlbumsCell"
+    static let identifier = "MediaTypesCell"
     
     //MARK: - Outlets
     
