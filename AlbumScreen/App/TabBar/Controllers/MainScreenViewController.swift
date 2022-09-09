@@ -60,11 +60,11 @@ class MainScreenViewController: UIViewController {
         navigationItem.leftBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
+
     //MARK: - Action
-    
+
     @objc private func addButtonPressed() {
-        
+
     }
     
     //MARK: - Create UICollectionLayout
