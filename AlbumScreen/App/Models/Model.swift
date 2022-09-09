@@ -9,7 +9,7 @@ import Foundation
 
 struct AlbumsModel: Hashable {
     var albumImage: String
-    var albumName: String
+    var albumName: String?
     var numberOfPhotosLabel: String?
     var chevronImage: String?
 }
@@ -25,8 +25,8 @@ extension AlbumsModel {
          AlbumsModel(albumImage: "whatsapp", albumName: "Whatsapp", numberOfPhotosLabel: "5", chevronImage: nil)],
         
         // first section
-        [AlbumsModel(albumImage: "whatsapp", albumName: "Семья", numberOfPhotosLabel: "From You", chevronImage: nil),
-         AlbumsModel(albumImage: "dropbox", albumName: "Gang", numberOfPhotosLabel: "From You", chevronImage: nil)],
+        [AlbumsModel(albumImage: "whatsapp", albumName: "Family", numberOfPhotosLabel: "From You", chevronImage: nil),
+         AlbumsModel(albumImage: "gang", albumName: "Gang", numberOfPhotosLabel: "From You", chevronImage: nil)],
         
         // second section
         [AlbumsModel(albumImage: "video",

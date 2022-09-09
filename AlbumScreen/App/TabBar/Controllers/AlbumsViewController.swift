@@ -8,9 +8,7 @@
 import UIKit
 import SnapKit
 
-class MainScreenViewController: UIViewController {
-    
-   private var albumItems: [[AlbumsModel]]?
+class AlbumsViewController: UIViewController {
     
     //MARK: - Outlets
     
@@ -60,11 +58,11 @@ class MainScreenViewController: UIViewController {
         navigationItem.leftBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
+
     //MARK: - Action
-    
+
     @objc private func addButtonPressed() {
-        
+
     }
     
     //MARK: - Create UICollectionLayout
@@ -91,7 +89,7 @@ class MainScreenViewController: UIViewController {
                 layoutSection.orthogonalScrollingBehavior = .groupPaging
                 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
-                                                                     heightDimension: .estimated(50))
+                                                                     heightDimension: .estimated(44))
                 
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
@@ -118,7 +116,7 @@ class MainScreenViewController: UIViewController {
                 layoutSection.orthogonalScrollingBehavior = .groupPaging
                 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
-                                                                     heightDimension: .estimated(50))
+                                                                     heightDimension: .estimated(44))
                 
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
@@ -177,7 +175,7 @@ class MainScreenViewController: UIViewController {
 
 //MARK: - MainScreenViewController extension
 
-extension MainScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return AlbumsModel.albumsModelsArray[section].count
@@ -239,7 +237,7 @@ extension MainScreenViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-//        let itemName = String(describing: albumItems![indexPath.section][indexPath.item].albumName)
-//        print("Была нажата ячейка -> \(itemName)")
+     let itemName = String(describing: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item].albumName!)
+        print("Была нажата ячейка -> \(itemName)")
     }
 }
