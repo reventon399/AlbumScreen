@@ -39,8 +39,6 @@ class MyAlbumsCell: UICollectionViewCell {
     lazy var stack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-//        stack.spacing = 0.5
-//        stack.distribution = .fillProportionally
         return stack
     }()
     

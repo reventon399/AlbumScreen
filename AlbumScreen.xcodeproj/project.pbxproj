@@ -16,6 +16,7 @@
 		91911FB928CA4CB400C21F64 /* MyAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */; };
 		91911FBB28CA5EDC00C21F64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FBA28CA5EDB00C21F64 /* Model.swift */; };
 		91911FBF28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FBE28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift */; };
+		91911FC128CB7DCF00C21F64 /* SharedAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FC028CB7DCF00C21F64 /* SharedAlbumsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsCell.swift; sourceTree = "<group>"; };
 		91911FBA28CA5EDB00C21F64 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		91911FBE28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsAndSharedAlbumsCellHeader.swift; sourceTree = "<group>"; };
+		91911FC028CB7DCF00C21F64 /* SharedAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAlbumsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */,
+				91911FC028CB7DCF00C21F64 /* SharedAlbumsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				91911F9E28CA434E00C21F64 /* SceneDelegate.swift in Sources */,
 				91911FB928CA4CB400C21F64 /* MyAlbumsCell.swift in Sources */,
 				91911FBF28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift in Sources */,
+				91911FC128CB7DCF00C21F64 /* SharedAlbumsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
