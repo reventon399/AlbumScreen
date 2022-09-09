@@ -17,6 +17,7 @@ class MainScreenViewController: UIViewController {
         collectionView.register(MyAlbumsCell.self, forCellWithReuseIdentifier: MyAlbumsCell.identifier)
         collectionView.register(SharedAlbumsCell.self, forCellWithReuseIdentifier: SharedAlbumsCell.identifier)
         collectionView.register(MediaTypesCell.self, forCellWithReuseIdentifier: MediaTypesCell.identifier)
+        collectionView.register(UtilitiesCell.self, forCellWithReuseIdentifier: UtilitiesCell.identifier)
         
         collectionView.register(MyAlbumsAndSharedAlbumsCellHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
