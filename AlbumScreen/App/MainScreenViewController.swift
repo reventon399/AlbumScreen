@@ -202,6 +202,10 @@ extension MainScreenViewController: UICollectionViewDataSource, UICollectionView
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier, for: indexPath) as! MyAlbumsAndSharedAlbumsCellHeader
             header.headerLabel.text = "Media Types"
             return header
+        case 3:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier, for: indexPath) as! MyAlbumsAndSharedAlbumsCellHeader
+            header.headerLabel.text = "Utilities"
+            return header
         default:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier, for: indexPath) as! MyAlbumsAndSharedAlbumsCellHeader
             header.headerLabel.text = "Shared Albums"
