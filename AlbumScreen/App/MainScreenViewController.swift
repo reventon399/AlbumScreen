@@ -22,6 +22,9 @@ class MainScreenViewController: UIViewController {
         collectionView.register(MyAlbumsAndSharedAlbumsCellHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier)
+        collectionView.register(MediaTypesAndUtilitiesHeader.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: MediaTypesAndUtilitiesHeader.identifier)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -199,11 +202,11 @@ extension MainScreenViewController: UICollectionViewDataSource, UICollectionView
             header.headerLabel.text = "Shared Albums"
             return header
         case 2:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier, for: indexPath) as! MyAlbumsAndSharedAlbumsCellHeader
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MediaTypesAndUtilitiesHeader.identifier, for: indexPath) as! MediaTypesAndUtilitiesHeader
             header.headerLabel.text = "Media Types"
             return header
         case 3:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier, for: indexPath) as! MyAlbumsAndSharedAlbumsCellHeader
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MediaTypesAndUtilitiesHeader.identifier, for: indexPath) as! MediaTypesAndUtilitiesHeader
             header.headerLabel.text = "Utilities"
             return header
         default:
