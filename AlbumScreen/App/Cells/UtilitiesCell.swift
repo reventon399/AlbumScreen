@@ -1,5 +1,5 @@
 //
-//  MediaTypesCell.swift
+//  UtilitiesCell.swift
 //  AlbumScreen
 //
 //  Created by Алексей Лосев on 09.09.2022.
@@ -8,9 +8,9 @@
 import UIKit
 import SnapKit
 
-class MediaTypesCell: UICollectionViewCell {
+class UtilitiesCell: UICollectionViewCell {
     
-    static let identifier = "MediaTypesCell"
+    static let identifier = "UtilitiesCell"
     
     //MARK: - Outlets
     

@@ -18,6 +18,7 @@
 		91911FBF28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FBE28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift */; };
 		91911FC128CB7DCF00C21F64 /* SharedAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FC028CB7DCF00C21F64 /* SharedAlbumsCell.swift */; };
 		91911FC328CB87CB00C21F64 /* MediaTypesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FC228CB87CB00C21F64 /* MediaTypesCell.swift */; };
+		91911FC528CB9F3300C21F64 /* UtilitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FC428CB9F3300C21F64 /* UtilitiesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		91911FBE28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsAndSharedAlbumsCellHeader.swift; sourceTree = "<group>"; };
 		91911FC028CB7DCF00C21F64 /* SharedAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAlbumsCell.swift; sourceTree = "<group>"; };
 		91911FC228CB87CB00C21F64 /* MediaTypesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypesCell.swift; sourceTree = "<group>"; };
+		91911FC428CB9F3300C21F64 /* UtilitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				91911FB828CA4CB400C21F64 /* MyAlbumsCell.swift */,
 				91911FC028CB7DCF00C21F64 /* SharedAlbumsCell.swift */,
 				91911FC228CB87CB00C21F64 /* MediaTypesCell.swift */,
+				91911FC428CB9F3300C21F64 /* UtilitiesCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				91911FBB28CA5EDC00C21F64 /* Model.swift in Sources */,
 				91911FA028CA434E00C21F64 /* MainScreenViewController.swift in Sources */,
+				91911FC528CB9F3300C21F64 /* UtilitiesCell.swift in Sources */,
 				91911F9C28CA434E00C21F64 /* AppDelegate.swift in Sources */,
 				91911F9E28CA434E00C21F64 /* SceneDelegate.swift in Sources */,
 				91911FC328CB87CB00C21F64 /* MediaTypesCell.swift in Sources */,

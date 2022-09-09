@@ -17,6 +17,7 @@ class MainScreenViewController: UIViewController {
         collectionView.register(MyAlbumsCell.self, forCellWithReuseIdentifier: MyAlbumsCell.identifier)
         collectionView.register(SharedAlbumsCell.self, forCellWithReuseIdentifier: SharedAlbumsCell.identifier)
         collectionView.register(MediaTypesCell.self, forCellWithReuseIdentifier: MediaTypesCell.identifier)
+        collectionView.register(UtilitiesCell.self, forCellWithReuseIdentifier: UtilitiesCell.identifier)
         
         collectionView.register(MyAlbumsAndSharedAlbumsCellHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -175,6 +176,10 @@ extension MainScreenViewController: UICollectionViewDataSource, UICollectionView
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: MediaTypesCell.identifier, for: indexPath) as! MediaTypesCell
             item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
             return item
+        case 3:
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: UtilitiesCell.identifier, for: indexPath) as! UtilitiesCell
+            item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
+            return item
         default:
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCell.identifier, for: indexPath) as! MyAlbumsCell
             item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
@@ -196,6 +201,10 @@ extension MainScreenViewController: UICollectionViewDataSource, UICollectionView
         case 2:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier, for: indexPath) as! MyAlbumsAndSharedAlbumsCellHeader
             header.headerLabel.text = "Media Types"
+            return header
+        case 3:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier, for: indexPath) as! MyAlbumsAndSharedAlbumsCellHeader
+            header.headerLabel.text = "Utilities"
             return header
         default:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MyAlbumsAndSharedAlbumsCellHeader.identifier, for: indexPath) as! MyAlbumsAndSharedAlbumsCellHeader
