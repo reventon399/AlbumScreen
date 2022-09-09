@@ -1,5 +1,5 @@
 //
-//  MyAlbumsAndSharedAlbumsCellHeader.swift
+//  MediaTypesAndUtilitiesHeader.swift
 //  AlbumScreen
 //
 //  Created by Алексей Лосев on 09.09.2022.
@@ -8,9 +8,9 @@
 import UIKit
 import SnapKit
 
-class MyAlbumsAndSharedAlbumsCellHeader: UICollectionReusableView {
+class MediaTypesAndUtilitiesHeader: UICollectionReusableView {
     
-    static let identifier = "MyAlbumsAndSharedAlbumsCellHeader"
+    static let identifier = "MediaTypesAndUtilitiesHeader"
     
     // MARK: - Outlets
     
@@ -26,13 +26,6 @@ class MyAlbumsAndSharedAlbumsCellHeader: UICollectionReusableView {
         return view
     }()
     
-    private lazy var seeAllButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("See All", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        return button
-    }()
-    
     // MARK: - Initializers
     
     override init(frame: CGRect) {
@@ -46,24 +39,17 @@ class MyAlbumsAndSharedAlbumsCellHeader: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
- 
-    
     // MARK: - Setup
     
     private func setupHierarchy() {
         addSubview(headerLabel)
         addSubview(separatorView)
-        addSubview(seeAllButton)
     }
     
     private func setupLayout() {
         headerLabel.snp.makeConstraints { make in
             make.bottom.equalTo(self)
             make.left.equalTo(self)
-        }
-        seeAllButton.snp.makeConstraints { make in
-            make.right.equalTo(self)
-            make.bottom.equalTo(self)
         }
         separatorView.snp.makeConstraints { make in
             make.height.equalTo(0.5)
