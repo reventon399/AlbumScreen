@@ -86,5 +86,7 @@ class SharedAlbumsCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.albumImageView.image = nil
+        self.albumNameLabel.text = nil
+        self.numberOfPhotosLabel.text = nil
     }
 }

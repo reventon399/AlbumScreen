@@ -16,7 +16,6 @@ class UtilitiesCell: UICollectionViewCell {
     
     private lazy var albumImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.tintColor = .systemBlue
@@ -44,7 +43,6 @@ class UtilitiesCell: UICollectionViewCell {
         imageView.tintColor = .systemGray
         return imageView
     }()
-   
     
     //MARK: - Initializers
     

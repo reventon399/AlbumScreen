@@ -16,7 +16,6 @@ class MediaTypesCell: UICollectionViewCell {
     
     private lazy var albumImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.tintColor = .systemBlue
@@ -44,7 +43,6 @@ class MediaTypesCell: UICollectionViewCell {
         imageView.tintColor = .systemGray
         return imageView
     }()
-   
     
     //MARK: - Initializers
     
@@ -102,5 +100,7 @@ class MediaTypesCell: UICollectionViewCell {
         super.prepareForReuse()
         self.albumImageView.image = nil
         self.chevronImageView.image = nil
+        self.albumNameLabel.text = nil
+        self.numberOfPhotosLabel.text = nil
     }
 }

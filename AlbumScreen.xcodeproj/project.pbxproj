@@ -19,7 +19,7 @@
 		91911FC128CB7DCF00C21F64 /* SharedAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FC028CB7DCF00C21F64 /* SharedAlbumsCell.swift */; };
 		91911FC328CB87CB00C21F64 /* MediaTypesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FC228CB87CB00C21F64 /* MediaTypesCell.swift */; };
 		91911FC528CB9F3300C21F64 /* UtilitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FC428CB9F3300C21F64 /* UtilitiesCell.swift */; };
-		91911FC728CBA15100C21F64 /* MediaTypesAndUtilitiesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FC628CBA15100C21F64 /* MediaTypesAndUtilitiesHeader.swift */; };
+		91911FC728CBA15100C21F64 /* MediaTypesAndUtilitiesCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91911FC628CBA15100C21F64 /* MediaTypesAndUtilitiesCellHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 		91911FC028CB7DCF00C21F64 /* SharedAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAlbumsCell.swift; sourceTree = "<group>"; };
 		91911FC228CB87CB00C21F64 /* MediaTypesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypesCell.swift; sourceTree = "<group>"; };
 		91911FC428CB9F3300C21F64 /* UtilitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesCell.swift; sourceTree = "<group>"; };
-		91911FC628CBA15100C21F64 /* MediaTypesAndUtilitiesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypesAndUtilitiesHeader.swift; sourceTree = "<group>"; };
+		91911FC628CBA15100C21F64 /* MediaTypesAndUtilitiesCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypesAndUtilitiesCellHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +70,7 @@
 		91911F9A28CA434E00C21F64 /* AlbumScreen */ = {
 			isa = PBXGroup;
 			children = (
+				91911FBC28CA6B8400C21F64 /* Delegates */,
 				91911FB228CA46B700C21F64 /* App */,
 				91911FB128CA46A300C21F64 /* Sources */,
 				91911FAF28CA467D00C21F64 /* Resources */,
@@ -105,11 +106,11 @@
 		91911FB228CA46B700C21F64 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				91911FBD28CA7E1C00C21F64 /* Header */,
-				91911FBC28CA6B8400C21F64 /* Delegates */,
+				91911FCA28CBBAC600C21F64 /* TabBar */,
+				91911FBD28CA7E1C00C21F64 /* Headers */,
 				91911FB728CA4C9100C21F64 /* Cells */,
-				91911F9F28CA434E00C21F64 /* MainScreenViewController.swift */,
-				91911FBA28CA5EDB00C21F64 /* Model.swift */,
+				91911FC928CBBA8B00C21F64 /* Controllers */,
+				91911FC828CBBA7D00C21F64 /* Models */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -134,13 +135,36 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		91911FBD28CA7E1C00C21F64 /* Header */ = {
+		91911FBD28CA7E1C00C21F64 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
 				91911FBE28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift */,
-				91911FC628CBA15100C21F64 /* MediaTypesAndUtilitiesHeader.swift */,
+				91911FC628CBA15100C21F64 /* MediaTypesAndUtilitiesCellHeader.swift */,
 			);
-			path = Header;
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		91911FC828CBBA7D00C21F64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91911FBA28CA5EDB00C21F64 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		91911FC928CBBA8B00C21F64 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				91911F9F28CA434E00C21F64 /* MainScreenViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		91911FCA28CBBAC600C21F64 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +251,7 @@
 				91911FC328CB87CB00C21F64 /* MediaTypesCell.swift in Sources */,
 				91911FB928CA4CB400C21F64 /* MyAlbumsCell.swift in Sources */,
 				91911FBF28CA7E6400C21F64 /* MyAlbumsAndSharedAlbumsCellHeader.swift in Sources */,
-				91911FC728CBA15100C21F64 /* MediaTypesAndUtilitiesHeader.swift in Sources */,
+				91911FC728CBA15100C21F64 /* MediaTypesAndUtilitiesCellHeader.swift in Sources */,
 				91911FC128CB7DCF00C21F64 /* SharedAlbumsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
