@@ -25,7 +25,7 @@ class MyAlbumsCell: UICollectionViewCell {
     private lazy var albumNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-        label.textColor = .white
+        label.textColor = .black
         return label
     }()
     
