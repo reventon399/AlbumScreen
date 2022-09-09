@@ -222,6 +222,10 @@ extension MainScreenViewController: UICollectionViewDataSource, UICollectionView
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCell.identifier, for: indexPath) as! MyAlbumsCell
             item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
             return item
+        case 1:
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: SharedAlbumsCell.identifier, for: indexPath) as! SharedAlbumsCell
+            item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
+            return item
         default:
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCell.identifier, for: indexPath) as! MyAlbumsCell
             item.configuration(model: AlbumsModel.albumsModelsArray[indexPath.section][indexPath.item])
