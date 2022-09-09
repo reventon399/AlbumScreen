@@ -21,7 +21,7 @@ class MyAlbumsAndSharedAlbumsCellHeader: UICollectionReusableView {
     }()
     
     private lazy var separatorView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = .systemGray
         return view
     }()
@@ -45,9 +45,7 @@ class MyAlbumsAndSharedAlbumsCellHeader: UICollectionReusableView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
- 
-    
+
     // MARK: - Setup
     
     private func setupHierarchy() {

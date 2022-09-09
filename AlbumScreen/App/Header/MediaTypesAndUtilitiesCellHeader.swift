@@ -8,9 +8,9 @@
 import UIKit
 import SnapKit
 
-class MediaTypesAndUtilitiesHeader: UICollectionReusableView {
+class MediaTypesAndUtilitiesCellHeader: UICollectionReusableView {
     
-    static let identifier = "MediaTypesAndUtilitiesHeader"
+    static let identifier = "MediaTypesAndUtilitiesCellHeader"
     
     // MARK: - Outlets
     
